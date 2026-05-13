@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python *)",
+      "Bash(python3 -m py_compile config.py start.py login.py image_utils.py)",
+      "Bash(python3 -c \"import playwright; print\\(playwright.__version__\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3 -m py_compile start.py login.py)"
+    ]
+  }
+}

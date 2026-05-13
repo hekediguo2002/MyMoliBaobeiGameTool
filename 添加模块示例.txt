@@ -1,0 +1,29 @@
+
+
+增加一个模块 shilian_daochang.py
+函数定义,示例
+def 模块名字(page: Page) -> None:
+
+要求导入所有config.py中定义的常量和image_utils.py中定义的函数
+禁止使用try except语句
+每一步都使用print打印当前步骤和结果
+使用click_by_image禁止加if判断，直接调用
+在main.py中加入该模块函数调用
+
+执行以下流程
+
+1. click_by_image 冒险图标.png
+2. click_by_image 试炼.png
+3. 点击最左侧的进入图标.png
+4. 如果有重置进度.png，则click_by_image 重置进度.png，等待0.5秒 点击确定.png 等待1秒
+5. 如果有一键扫荡.png，则click_by_image 一键扫荡.png，等待0.5秒 点击确定.png 等待3秒，点击屏幕中心，等待1秒，点击屏幕最左边
+6. click_by_image 武器试炼关闭按钮.png
+7. click_client_center
+8. 点击武器试炼关闭按钮.png 关闭界面
+
+
+3. 开始循环，每轮循环：
+    a. 使用image_exists 检测界面是否有 进入图标.png，如果有则直接break。
+    b. 检测界面是否有 扫荡.png，如果有则点击扫荡.png，等待1秒
+    c. 然后调用waitforfight waitforfighttoend 来等待战斗结束
+  
